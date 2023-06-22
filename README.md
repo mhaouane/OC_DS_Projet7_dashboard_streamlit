@@ -1,2 +1,2 @@
-# OC_DS_Projte7_dashboard_streamlit
-OC_DS_Projte7_dashboard_streamlit
+# OC_DS_Projet7_dashboard_streamlit
+OC_DS_Projet7_dashboard_streamlit
