@@ -20,7 +20,7 @@ import time
 def main():
     # local API (à remplacer par l'adresse de l'application déployée)
     #API_URL = "http://127.0.0.1:5000/api/"
-    API_URL = "https://oc-api-flask-mh.herokuapp.com/api/"
+    API_URL = "https://oc-ds-projet7-api-flask-mh.streamlit.app/"
 
     ##################################
     # LIST OF API REQUEST FUNCTIONS
