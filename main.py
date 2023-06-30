@@ -15,7 +15,9 @@ import os
 import shap
 import time
 
+from streamlit.logger import get_logger
 
+LOGGER = get_logger(__name__)
 
 def main():
     # local API (à remplacer par l'adresse de l'application déployée)
