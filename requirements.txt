@@ -12,5 +12,4 @@ numpy==1.23.1
 pillow==9.5.0
 joblib==1.2.0
 scikit_learn==1.2.2
-./streamlit-1.9.0-py2.py3-none-any.whl
 
