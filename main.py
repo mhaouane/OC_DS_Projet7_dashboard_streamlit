@@ -22,10 +22,14 @@ LOGGER = get_logger(__name__)
 def main():
     # local API (à remplacer par l'adresse de l'application déployée)
     #API_URL = "http://127.0.0.1:5000/api/"
-    API_URL = "https://oc-ds-projet7-api-flask-mh.streamlit.app/"
+    API_URL = "https://oc-api-flask-mh.onrender.com/api/"
+    #"https://oc-ds-projet7-api-flask-mh.streamlit.app/"
+    
 
     ##################################
     # LIST OF API REQUEST FUNCTIONS
+
+    
 
     st.set_page_config(
         page_title="Hello",
