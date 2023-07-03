@@ -29,16 +29,22 @@ def main():
     ##################################
     # LIST OF API REQUEST FUNCTIONS
 
-    
+   ##################################
+    # LIST OF API REQUEST FUNCTIONS
 
-    st.set_page_config(
-        page_title="Hello",
-        page_icon="👋",
-    )
-
-    st.write("# Welcome to Streamlit! by Mohamed👋")
-
-    st.sidebar.success("Select a demo above.")
+    # Get list of SK_IDS (cached)
+    @st.cache
+    def get_sk_id_list():
+        # URL of the sk_id API
+        SK_IDS_API_URL = API_URL + "sk_ids/"
+        # Requesting the API and saving the response
+        response = requests.get(SK_IDS_API_URL)
+        # Convert from JSON format to Python dict
+        content = json.loads(response.content)
+        # Getting the values of SK_IDS from the content
+        SK_IDS = pd.Series(content['data']).values
+        return SK_IDS
+ 
 
    
 
