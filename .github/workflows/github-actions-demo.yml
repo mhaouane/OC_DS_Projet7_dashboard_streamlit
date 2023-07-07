@@ -18,5 +18,6 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Testing the routes
       - run: echo "testing api code before deployment"
-        run: pytest ././testing/test_api.py
+        run: |
+          pytest ././testing/test_api.py
       - run: echo "🍏 This job's status is ${{ job.status }}."
