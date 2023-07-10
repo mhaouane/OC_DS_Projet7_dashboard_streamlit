@@ -160,44 +160,7 @@ def main():
 
     # #############################
     
-    def get_list_display_features(shap_val_trans, def_n, key):
     
-        all_feat = X_tr_all.columns.to_list()
-        
-        n = st.slider("Nb of features to display",
-                      min_value=2, max_value=42,
-                      value=def_n, step=None, format=None, key=key)
-        
-        if st.checkbox('Choose main features according to SHAP local interpretation for the applicant customer', key=key):
-            disp_cols = list(shap_val_trans.abs()
-                                .sort_values(ascending=False)
-                                .iloc[:n].index)
-        else:
-            disp_cols = list(get_features_importances().sort_values(ascending=False)\
-                                            .iloc[:n].index)
-            
-        disp_box_cols = st.multiselect('Choose the features to display (default: order of general importance for lgbm calssifier):',
-                                        sorted(all_feat),
-                                        default=disp_cols, key=key)
-        return disp_box_cols
-
-     # #############################
-    
-    def get_list_display_features(shap_val_trans, def_n, key):
-    
-        all_feat = X_tr_all.columns.to_list()
-        
-        n = st.slider("Nb of features to display",
-                      min_value=2, max_value=42,
-                      value=def_n, step=None, format=None, key=key)
-        
-        disp_cols = list(get_features_importances().sort_values(ascending=False)\
-                                            .iloc[:n].index)
-            
-        disp_box_cols = st.multiselect('Choose the features to display (default: order of general importance for lgbm calssifier):',
-                                        sorted(all_feat),
-                                        default=disp_cols, key=key)
-        return disp_box_cols
     # ##########################
 
     # ##################################################
